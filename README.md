@@ -1,4 +1,4 @@
-# Welcome to StackEdit!
+# ConfigCat Helper
 
 Hello, I created this helper to speed up and facilitate the control of feature flags in ConfigCat.
 Its construction is very complex and verbose, which makes us avoid using it.
@@ -34,12 +34,14 @@ Easy peasy lemon squeezy!!
 		basic_auth_password  =  var.configcat_password
 	}
 
-	module  "sandbox_default" {
+	module  "product_default" {
 		source  =  "wsalmi/helper/configcat"
 
 		providers  =  { configcat = configcat }
 		product =  "My Product Name"
 		config =  "Default"
+		ENVs = ["DEV", "HML", "PRD"]
+
 		flags =  {
 			example_bool =  { name = "Teste Boolean", type = "boolean", values = { DEV = true, HML = false, PRD = false }, tags =  ["My Flag 1", "My Flag 2"] }
 			example_string =  { name = "Teste String", type = "string", values = { DEV = "dev", HML = "UAT", PRD = "Production" }, tags =  ["My Flag 2"] }
