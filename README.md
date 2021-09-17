@@ -44,10 +44,10 @@ module  "product_default" {
 	ENVs = ["DEV", "HML", "PRD"]
 
 	flags =  {
-		example_bool =  { name = "Teste Boolean", type = "boolean", values = { DEV = true, HML = false, PRD = false }, tags =  ["My Flag 1", "My Flag 2"] }
-		example_string =  { name = "Teste String", type = "string", values = { DEV = "dev", HML = "UAT", PRD = "Production" }, tags =  ["My Flag 2"] }
-		example_int =  { name = "Teste Int", type = "int", values = { DEV = 1, HML = 2, PRD = 3 }, tags =  [] }
-		example_double =  { name = "Teste Double", type = "double", values = { DEV = 1.2, HML = 2.2, PRD = 3.0 }, tags =  [] }
+		example_bool =  { name = "Teste Boolean", type = "boolean", initial_values = { DEV = true, HML = false, PRD = false }, tags =  ["My Flag 1", "My Flag 2"] }
+		example_string =  { name = "Teste String", type = "string", initial_values = { DEV = "dev", HML = "UAT", PRD = "Production" }, tags =  ["My Flag 2"] }
+		example_int =  { name = "Teste Int", type = "int", initial_values = { DEV = 1, HML = 2, PRD = 3 }, tags =  [] }
+		example_double =  { name = "Teste Double", type = "double", initial_values = { DEV = 1.2, HML = 2.2, PRD = 3.0 }, tags =  [] }
 	}
 }
 ```
