@@ -8,11 +8,6 @@ terraform {
   }
 }
 
-provider "configcat" {
-  basic_auth_username = ""
-  basic_auth_password = ""
-}
-
 locals {
   FLAGS_X_ENVS = { for k, v in flatten([
       for f_k, f_v in var.flags : [
